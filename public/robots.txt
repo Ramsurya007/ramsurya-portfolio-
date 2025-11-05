@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ramsurya-jayabalan-portfolio.vercel.app/sitemap.xml
