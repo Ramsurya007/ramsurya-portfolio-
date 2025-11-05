@@ -1,0 +1,1352 @@
+/* ============================== COLOR THEME ============================== */
+:root {
+  --color-primary: #4f46e5;
+  /* Indigo — main brand color */
+  --color-secondary: #0ea5e9;
+  /* Sky blue — accent for buttons/links */
+  --color-accent: #facc15;
+  /* Warm yellow — highlight or hover */
+  --color-neutral-light: #f9fafb;
+  /* Very light gray background */
+  --color-neutral-dark: #111827;
+  /* Deep gray for text or contrast */
+}
+
+/* ============================== GLOBAL STYLES ============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--color-neutral-light);
+  color: var(--color-neutral-dark);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* ===== Scroll Reveal Animation ===== */
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Active nav highlight ===== */
+header nav a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ===== Project / Certificate card motion fix ===== */
+.project-card,
+.certificate-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+
+/* ============================== HEADER SECTION ============================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  background-color: var(--color-primary);
+  animation: slideDown 1s ease-in-out;
+}
+
+/* ----- LOGO SECTION ----- */
+header .head-logo {
+  display: flex;
+  align-items: center;
+}
+
+header .head-logo img {
+  height: 50px;
+  border: 3px solid var(--color-neutral-light);
+  border-radius: 50%;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+header .head-logo img:hover {
+  transform: scale(1.1);
+  border-color: var(--color-accent);
+}
+
+header .head-logo h3 {
+  color: var(--color-neutral-light);
+  margin-left: 10px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+main .social-links a {
+  font-size: 1.4rem;
+  color: var(--color-neutral-dark);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+main .social-links a:hover {
+  transform: scale(1.2);
+}
+
+.linkedin:hover {
+  color: #0a66c2;
+}
+
+.facebook:hover {
+  color: #1877f2;
+}
+
+.naukri:hover {
+  color: #0077b5;
+}
+
+.github:hover {
+  color: var(--color-neutral-dark);
+}
+
+/* ----- NAVIGATION ----- */
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-neutral-light);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--color-accent);
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* ============================== HOME SECTION ============================== */
+main #home {
+  height: 81vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  align-items: center;
+  padding: 60px 80px;
+  gap: 40px;
+  background-color: var(--color-neutral-light);
+  overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+main .home-left {
+  max-width: 49%;
+  grid-area: left;
+  max-width: 600px;
+  animation: fadeUp 1.2s ease-in-out forwards;
+}
+
+main .home-left h1 {
+  font-size: 48px;
+  color: var(--color-primary);
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+main .home-left h2 {
+  color: var(--color-neutral-dark);
+  font-size: 34px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+
+main .home-left h2 #develop {
+  color: var(--color-primary);
+}
+
+main .home-left button a {
+  color: var(--color-neutral-light);
+  text-decoration: none;
+}
+
+main .home-left button {
+  margin-left: 20px;
+  font-size: 20px;
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--color-secondary);
+  color: var(--color-neutral-light);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+main .home-left button:hover {
+  background-color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+main .home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 75%;
+  grid-area: right;
+  text-align: center;
+}
+
+main .home-right img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, border 0.3s ease;
+}
+
+main .home-right img:hover {
+  transform: scale(1.3);
+  border: 3px solid var(--color-accent);
+}
+
+/* ============================== ABOUT SECTION ============================== */
+main #about {
+  display: grid;
+  grid-template-columns: 1fr 0.35 fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "top1 top2 top3 "
+    "left right right";
+  align-items: center;
+  padding: 60px 80px;
+  gap: 40px;
+  min-height: 60vh;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-in-out;
+}
+
+main #about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main #about h1 {
+  grid-area: top2;
+  text-align: center;
+  font-size: 36px;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+
+main #about .about-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main #about .about-left img {
+  width: 80%;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, border 0.3s ease;
+}
+
+main #about .about-left img:hover {
+  transform: scale(1.1);
+  border: 3px solid var(--color-accent);
+}
+
+main #about .about-right {
+  grid-area: right;
+
+}
+
+main #about .about-right p {
+  font-size: 20px;
+  max-width: 800px;
+  line-height: 1.6;
+  color: var(--color-neutral-dark);
+  text-align: justify;
+  white-space: normal;
+  padding: 0 20px;
+  border-right: 3px solid var(--color-primary);
+  display: inline-block;
+
+  overflow: hidden;
+}
+
+main #about .about-right .highlight {
+  font-weight: 600;
+  color: var(--color-secondary);
+  /* default before JS applies accent */
+  overflow: visible;
+}
+
+/* ============================== SKILLS SECTION ============================== */
+#skills {
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+}
+
+#skills h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+.skill-domain {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-domain h2 {
+  color: var(--color-secondary);
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--color-accent);
+  padding-left: 10px;
+}
+
+.skill-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.skill-card {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card span {
+  position: absolute;
+  bottom: -30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.skill-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover img {
+  transform: translateY(-10px);
+}
+
+.skill-card:hover span {
+  bottom: 10px;
+  opacity: 1;
+}
+
+/* ============================== EXPERIENCE SECTION ============================== */
+main #experience {
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+main #experience h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-card {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-card h2 {
+  color: var(--color-secondary);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.experience-card h3 {
+  font-size: 20px;
+  color: var(--color-neutral-dark);
+  margin-bottom: 5px;
+}
+
+.experience-card .duration {
+  font-size: 16px;
+  color: gray;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+/* ============================== PROJECTS SECTION ============================== */
+#projects {
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#projects h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image & Video Uniform Look */
+.project-media {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* Video fix */
+.project-card video.project-media {
+  object-fit: cover;
+  background-color: #000;
+}
+
+.project-card h2 {
+  color: var(--color-secondary);
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.project-card h3 {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: var(--color-neutral-dark);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.project-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.project-buttons .btn.view {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.project-buttons .btn.code {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.project-buttons .btn:hover {
+  transform: scale(1.08);
+  background-color: var(--color-accent);
+  color: var(--color-neutral-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+  }
+
+  .project-media {
+    height: 180px;
+  }
+}
+
+/* ============================== EDUCATION SECTION ============================== */
+#education {
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#education h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  justify-content: center;
+}
+
+.education-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h2 {
+  color: var(--color-secondary);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.education-card h3 {
+  color: var(--color-neutral-dark);
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.edu-duration {
+  display: block;
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  font-size: 15px;
+  color: var(--color-neutral-dark);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education-card {
+    padding: 20px;
+  }
+}
+
+/* ============================== CERTIFICATES SECTION ============================== */
+#certificates {
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#certificates h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
+
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* ✅ Fixed 3 columns */
+  gap: 40px;
+  justify-items: center;
+}
+
+.certificate-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  /* ✅ Keeps cards equal width */
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h2 {
+  color: var(--color-secondary);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.certificate-card p {
+  font-size: 15px;
+  color: var(--color-neutral-dark);
+  margin-bottom: 15px;
+}
+
+.certificate-card .btn.view {
+  background-color: var(--color-secondary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.certificate-card .btn.view:hover {
+  background-color: var(--color-accent);
+  color: var(--color-neutral-dark);
+  transform: scale(1.05);
+}
+
+/* ============================== CONTACT SECTION ============================== */
+#contact {
+  height: 80vh;
+  padding: 80px 60px;
+  background-color: var(--color-neutral-light);
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+#contact h1 {
+  font-size: 36px;
+  color: var(--color-primary);
+  border-bottom: 5px dotted var(--color-accent);
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.contact-intro {
+  font-size: 18px;
+  color: var(--color-neutral-dark);
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+  justify-content: center;
+}
+
+/* Left Side — Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-item i {
+  font-size: 28px;
+  color: var(--color-primary);
+}
+
+.info-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-secondary);
+}
+
+.info-item p {
+  margin: 2px 0 0 0;
+}
+
+.info-item a {
+  color: var(--color-neutral-dark);
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  color: var(--color-accent);
+}
+
+/* Right Side — Form */
+.contact-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 8px;
+  padding-right: 3PX;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+.contact-form .btn.send {
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact-form .btn.send:hover {
+  background-color: var(--color-accent);
+  color: var(--color-neutral-dark);
+  transform: scale(1.05);
+}
+
+/* ============================= FORM VALIDATION FEEDBACK ============================= */
+.contact-form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+  border-color: red;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+/* ============================== KEYFRAMES ============================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.emailjs-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .25s ease;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+.emailjs-toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.emailjs-toast.success {
+  background: #16a34a;
+}
+
+.emailjs-toast.error {
+  background: #dc2626;
+}
+/* ======= Menu Toggle (Hamburger Icon) ======= */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 101;
+  margin-left: auto;         /* ✅ Push it to the right */
+  position: absolute;        /* ✅ Position it within header */
+  right: 25px;               /* ✅ Move to right side */
+  top: 50%;
+  transform: translateY(-50%); /* ✅ Perfect vertical centering */
+}
+
+
+/* ============================== MEDIA QUERIES ============================== */
+/* ============================= RESPONSIVE DESIGN (MOBILE + TABLET) ============================= */
+
+/* ---------- General Layout Adjustments ---------- */
+@media (max-width: 1024px) {
+
+
+
+  header {
+    padding: 15px 25px;
+  }
+
+  main #home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right";
+    text-align: center;
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  main .home-left {
+    max-width: 100%;
+  }
+
+  main .home-right {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  main .home-right img {
+    width: 70%;
+  }
+
+  /* Navigation toggle button for tablets */
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    max-height: 0;
+    /* hidden by default */
+    overflow: hidden;
+    /* hides content */
+    transition: max-height 0.4s ease-in-out;
+    /* smooth animation */
+  }
+
+  header nav.active {
+    max-height: 400px;
+    /* adjust for your number of links */
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  header nav a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    justify-items: center;      /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    align-content: center;
+    gap: 30px;                  /* Space between projects */
+    padding: 20px;
+  }
+  .project-card {
+      background: white;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 auto;
+      /* ✅ Ensures centering even in grid fallback */
+      max-width: 500px;
+    }
+  .social-links {
+      justify-content: center;
+      gap: 15px;
+    }
+}
+ 
+
+
+
+  /* ---------- Phones (<768px) ---------- */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 15px;
+    }
+
+    header .head-logo h3 {
+      font-size: 18px;
+    }
+    .social-links {
+      justify-content: center;
+      gap: 15px;
+    }
+
+    /* Home Section */
+    main #home {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "left"
+        "right";
+      gap: 30px;
+      text-align: center;
+    }
+
+    main .home-left h1 {
+      font-size: 34px;
+    }
+
+    main .home-left h2 {
+      font-size: 22px;
+    }
+
+    main .home-left button {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+
+    main .home-right img {
+      width: 90%;
+      transform: none !important;
+    }
+
+    /* About Section */
+    main #about {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "top2"
+        "left"
+        "right";
+      padding: 40px 20px;
+      gap: 25px;
+      text-align: center;
+    }
+
+    main #about .about-left img {
+      width: 70%;
+    }
+
+    main #about .about-right p {
+      font-size: 16px;
+      border: none;
+      padding: 0;
+    }
+
+    /* Skills Section */
+    #skills {
+      padding: 50px 20px;
+    }
+
+    .skill-domain h2 {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .skill-grid {
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .skill-card {
+      width: 90px;
+      height: 90px;
+    }
+
+    /* Experience Section */
+    #experience {
+      padding: 50px 25px;
+    }
+
+    .experience-card {
+      width: 100%;
+      padding: 20px;
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 50px 25px;
+    }
+
+    .projects-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    justify-items: center;      /* Center horizontally */
+    align-items: center;        /* Center vertically */
+    align-content: center;
+    gap: 30px;                  /* Space between projects */
+  }
+    .project-card {
+      width: 100%;
+      justify-items: center;      /* Center horizontally */
+    align-items: center;  
+    }
+
+    /* Education Section */
+    #education {
+      padding: 50px 25px;
+    }
+
+    .education-container {
+      grid-template-columns: 1fr;
+    }
+
+    /* Certificates Section */
+    #certificates {
+      padding: 50px 25px;
+    }
+
+    .certificates-container {
+      grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+      max-width: 100%;
+    }
+
+    #contact {
+    height: auto;
+    padding: 50px 25px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+    /* ======== FIX: CENTER PROJECT CARDS ON ALL DEVICES ======== */
+    #projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* ✅ Centers all project cards horizontally */
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      justify-content: center;
+      gap: 30px;
+      width: 70%;
+      max-width: 1200px;
+      /* ✅ Keeps content centered within page */
+      margin: 0 auto;
+    }
+
+    /* Individual project card styling */
+    .project-card {
+      background: white;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 auto;
+      /* ✅ Ensures centering even in grid fallback */
+      max-width: 500px;
+    }
+
+    /* Center buttons too */
+    .project-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+  }
+
+  /* ---------- Extra Small Devices (Phones under 480px) ---------- */
+  @media (max-width: 480px) {
+    main .home-left h1 {
+      font-size: 28px;
+    }
+
+    main .home-left h2 {
+      font-size: 18px;
+    }
+
+    main .home-left button {
+      padding: 8px 16px;
+      font-size: 15px;
+    }
+
+    .skill-card {
+      width: 80px;
+      height: 80px;
+    }
+
+    .certificate-card img {
+      height: 160px;
+    }
+
+    .project-media {
+      height: 160px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+
+    .contact-form .btn.send {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
+  }
