@@ -20,7 +20,7 @@ const downloadBtn = document.getElementById("downloadBtn");
 if (downloadBtn) {
   downloadBtn.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = "/Asset/Ramsurya Resume KA.pdf";
+    link.href = "/Asset/RAMSURYA JAYABALAN.pdf";
     link.download = "Ramsurya_Resume.pdf"; // sets the download filename
     document.body.appendChild(link);
     link.click();
