@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Ramsurya Jayabalan | Portfolio</title>
-  <meta name="description" content="Explore Ramsurya Jayabalan’s portfolio — showcasing web development, Python projects, and creative work." />
+  <meta name="description" content="Explore Ramsurya Jayabalan's portfolio — showcasing web development, Python projects, and creative work." />
   <meta name="keywords" content="Ramsurya, Ramsurya Jayabalan, Ramsurya Portfolio, Web Developer, Full Stack Developer, Python Developer" />
   <meta name="author" content="Ramsurya Jayabalan" />
   <meta name="robots" content="index, follow" />
-
-  <!-- If using meta verification (instead of HTML file), put your token and uncomment -->
-  <!-- <meta name="google-site-verification" content="PASTE_YOUR_TOKEN_HERE" /> -->
-
   <link rel="canonical" href="https://ramsurya-jayabalan-portfolio.vercel.app/" />
   <link rel="shortcut icon" href="./Asset/ramsurya.png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Ramsurya Jayabalan | Portfolio" />
-  <meta property="og:description" content="Explore Ramsurya’s creative and coding projects. Web Developer | Python | Full Stack." />
+  <meta property="og:description" content="Explore Ramsurya's creative and coding projects. Web Developer | Python | Full Stack." />
   <meta property="og:url" content="https://ramsurya-jayabalan-portfolio.vercel.app" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://ramsurya-jayabalan-portfolio.vercel.app/Asset/ramsurya.png" />
@@ -27,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ramsurya Jayabalan | Portfolio" />
-  <meta name="twitter:description" content="Explore Ramsurya’s web development and Python projects." />
+  <meta name="twitter:description" content="Explore Ramsurya's web development and Python projects." />
   <meta name="twitter:image" content="https://ramsurya-jayabalan-portfolio.vercel.app/Asset/ramsurya.png" />
 
   <!-- Schema.org -->
@@ -47,22 +41,33 @@
 
   <link rel="stylesheet" href="./CSS/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="./JAVASCRIPT/main.js" defer></script>
 </head>
-
 <body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Back to Top -->
+  <button id="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- ===================== HEADER ===================== -->
   <header>
     <div class="head-logo">
-      <img src="./Asset/ramsurya.png" alt="logo" />
+      <img src="./Asset/ramsurya.png" alt="Ramsurya Logo" />
       <h3>Ramsurya Jayabalan</h3>
     </div>
 
-    <!-- ✅ Hamburger icon (outside of nav) -->
-    <div class="menu-toggle">
+    <div class="menu-toggle" aria-label="Toggle menu">
       <i class="fas fa-bars"></i>
     </div>
 
-    <!-- ✅ Navigation -->
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -76,419 +81,312 @@
       </ul>
     </nav>
   </header>
+
   <main>
+
+    <!-- ===================== HOME ===================== -->
     <section id="home">
       <div class="home-left">
-        <h1>Hello , I am Ramsurya Jayabalan</h1>
-        <h2>
-          I'am
-          <span id="develop"> Python Developer </span>
-        </h2>
-        <button>
-          <a href="#contact">Contact</a>
-        </button>
-        <button id="downloadBtn">Resume</button>
+        <div class="home-eyebrow">Available for work</div>
+        <h1>Hello, I'm<br /><span class="name-gradient">Ramsurya Jayabalan</span></h1>
+        <h2>I'm a <span id="develop">Python Developer</span></h2>
+
+        <div class="btn-group">
+          <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+          <button id="downloadBtn" class="btn-secondary"><i class="fas fa-download"></i> Resume</button>
+        </div>
+
         <div class="social-links">
-          <a class="linkedin" href="https://www.linkedin.com/in/ramsurya-j/" target="_blank">
+          <a class="linkedin" href="https://www.linkedin.com/in/ramsurya-j/" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a class="facebook" href="https://www.facebook.com/j.ram.surya" target="_blank">
+          <a class="facebook" href="https://www.facebook.com/j.ram.surya" target="_blank" aria-label="Facebook">
             <i class="fab fa-facebook"></i>
           </a>
-          <a class="naukri" href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank">
+          <a class="naukri" href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" aria-label="Naukri">
             <i class="fa-solid fa-globe"></i>
           </a>
-          <a class="github" href="https://github.com/Ramsurya007" target="_blank">
+          <a class="github" href="https://github.com/Ramsurya007" target="_blank" aria-label="GitHub">
             <i class="fab fa-github"></i>
           </a>
         </div>
       </div>
 
       <div class="home-right">
-        <img src="./Asset/ramsurya main.jpg" alt="" />
-      </div>
-    </section>
-    <hr>
-    <section id="about">
-      <h1>About Me</h1>
-
-      <div class="about-right">
-        <p>
-          I’m <span class="highlight">Ramsurya Jayabalan</span>, a passionate and self-motivated learner with a strong
-          interest in
-          <span class="highlight">Python programming</span> and <span class="highlight">coding</span>.
-          I enjoy exploring how technology can solve real-world problems and continuously work on improving my skills.
-          My goal is to become a <span class="highlight">Python Developer, Data Analyst, Web Developer, Full Stack
-            Developer</span>,
-          and <span class="highlight">Software Engineer</span>.
-        </p>
-      </div>
-
-      <div class="about-left">
-        <img src="./Asset/ramsurya main.jpg" alt="Ramsurya Jayabalan" />
+        <div class="home-image-wrapper">
+          <img src="./Asset/ramsurya main.jpg" alt="Ramsurya Jayabalan" />
+          <span class="orbit-dot"></span>
+          <span class="orbit-dot"></span>
+          <span class="orbit-dot"></span>
+        </div>
       </div>
     </section>
 
     <hr />
-    <section id="skills">
-      <h1>Skills</h1>
 
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <div class="about-image-container">
+        <div class="about-image-frame">
+          <img src="./Asset/ramsurya main.jpg" alt="Ramsurya Jayabalan" />
+          <div class="about-tag tag-1"><i class="fas fa-code"></i> Full Stack Dev</div>
+          <div class="about-tag tag-2"><i class="fas fa-star"></i> 3+ Projects</div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h1 class="section-title">About Me</h1>
+        <p id="about-para">
+          I'm <span class="highlight">Ramsurya Jayabalan</span>, a passionate and self-motivated learner
+          with a strong interest in <span class="highlight">Python programming</span> and
+          <span class="highlight">web development</span>. I enjoy exploring how technology can solve
+          real-world problems and continuously work on improving my skills. My goal is to become a
+          <span class="highlight">Full Stack Developer</span> and
+          <span class="highlight">Data Analyst</span> who builds meaningful, impactful solutions.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Certificates</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Years Study</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <h1 class="section-title">Skills</h1>
       <div class="skills-container">
-        <!-- 💻 Programming & Development -->
+
         <div class="skill-domain">
           <h2>💻 Programming & Development</h2>
           <div class="skill-grid">
-            <div class="skill-card">
-              <img src="./Asset/python.png" alt="Python" />
-              <span>Python</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/java.png" alt="Java" />
-              <span>Java</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/html.png" alt="HTML" />
-              <span>HTML</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/css.png" alt="CSS" />
-              <span>CSS</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/javascript.png" alt="JS" />
-              <span>JavaScript</span>
-            </div>
-
-            <div class="skill-card">
-              <img src="./Asset/django.webp" alt="Django" />
-              <span>Django</span>
-            </div>
+            <div class="skill-card"><img src="./Asset/python.png" alt="Python" /><span>Python</span></div>
+            <div class="skill-card"><img src="./Asset/java.png" alt="Java" /><span>Java</span></div>
+            <div class="skill-card"><img src="./Asset/html.png" alt="HTML" /><span>HTML</span></div>
+            <div class="skill-card"><img src="./Asset/css.png" alt="CSS" /><span>CSS</span></div>
+            <div class="skill-card"><img src="./Asset/javascript.png" alt="JavaScript" /><span>JavaScript</span></div>
+            <div class="skill-card"><img src="./Asset/django.webp" alt="Django" /><span>Django</span></div>
           </div>
         </div>
 
-        <!-- 📊 Data & Analytics -->
         <div class="skill-domain">
           <h2>📊 Data & Analytics</h2>
           <div class="skill-grid">
-            <div class="skill-card">
-              <img src="./Asset/Sql.png" alt="SQL" />
-              <span>SQL</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/Excel.png" alt="Excel" />
-              <span>Excel</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/power-bi-.png" alt="Power BI" />
-              <span>Power BI</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/pandas.png" alt="Power BI" />
-              <span>Pandas</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/matplotlib.png" alt="Power BI" />
-              <span>matplotlib</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/seaborn.png" alt="Power BI" />
-              <span>Seaborn</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/numpy.png" alt="Power BI" />
-              <span>Numpy</span>
-            </div>
+            <div class="skill-card"><img src="./Asset/Sql.png" alt="SQL" /><span>SQL</span></div>
+            <div class="skill-card"><img src="./Asset/Excel.png" alt="Excel" /><span>Excel</span></div>
+            <div class="skill-card"><img src="./Asset/power-bi-.png" alt="Power BI" /><span>Power BI</span></div>
+            <div class="skill-card"><img src="./Asset/pandas.png" alt="Pandas" /><span>Pandas</span></div>
+            <div class="skill-card"><img src="./Asset/matplotlib.png" alt="Matplotlib" /><span>Matplotlib</span></div>
+            <div class="skill-card"><img src="./Asset/seaborn.png" alt="Seaborn" /><span>Seaborn</span></div>
+            <div class="skill-card"><img src="./Asset/numpy.png" alt="Numpy" /><span>Numpy</span></div>
           </div>
         </div>
 
-        <!-- 🧩 Tools & IDEs -->
         <div class="skill-domain">
           <h2>🧩 Tools & IDEs</h2>
           <div class="skill-grid">
-            <div class="skill-card">
-              <img src="./Asset/vs.png" alt="VS Code" />
-              <span>VS Code</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/pycharm.png" alt="PyCharm" />
-              <span>PyCharm</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/jupyter.png" alt="Jupyter" />
-              <span>Jupyter</span>
-            </div>
-            <div class="skill-card">
-              <img src="./Asset/anaconda.png" alt="Anaconda" />
-              <span>Anaconda</span>
-            </div>
+            <div class="skill-card"><img src="./Asset/vs.png" alt="VS Code" /><span>VS Code</span></div>
+            <div class="skill-card"><img src="./Asset/pycharm.png" alt="PyCharm" /><span>PyCharm</span></div>
+            <div class="skill-card"><img src="./Asset/jupyter.png" alt="Jupyter" /><span>Jupyter</span></div>
+            <div class="skill-card"><img src="./Asset/git.png" alt="Git" /><span>Git</span></div>
+            <div class="skill-card"><img src="./Asset/github.png" alt="GitHub" /><span>GitHub</span></div>
           </div>
         </div>
 
-        <!-- 🌐 Platforms -->
-        <div class="skill-domain">
-          <h2>🌐 Platforms</h2>
-          <div class="skill-grid">
-            <div class="skill-card">
-              <img src="./Asset/github.png" alt="GitHub" />
-              <span>GitHub</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+
     <hr />
+
+    <!-- ===================== TRAINING ===================== -->
     <section id="experience">
-      <h1>Experience</h1>
+      <h1 class="section-title">TRAINING</h1>
       <div class="experience-container">
         <div class="experience-card">
-          <h2>SystemTron</h2>
-          <h3>Python Developer Intern</h3>
-          <span class="duration">January 2024 - January 2024</span>
-          <ul>
-            <li>
-              Completed a one-month internship focused on Python programming.
-            </li>
-            <li>
-              Gained hands-on experience with Python fundamentals and
-              implemented practical solutions.
-            </li>
-          </ul>
+          <h2>Python Full Stack Developer Trainee </h2>
+          <h3>PySpiders Python Training Institute, BTM Bengaluru </h3>
+          <span class="duration"><i class="fas fa-calendar-alt"></i> Jun 2025 – Mar 2025</span>
+          <p>
+            •	Completed an intensive program covering Python, Django, SQL, Web Technologies, Power BI, and Data Libraries, earning certification PYS-26814. <br>
+            •	Built multiple full-stack projects under mentorship applying Django MVT, REST API design, database integration, front-end templating, and cloud deployment on Render and Vercel. <br>
+            •	Developed practical skills in Git/GitHub version control, debugging, and CI/CD pipeline management across the full software development lifecycle. b
+
+          </p>
         </div>
       </div>
     </section>
+
     <hr />
 
+    <!-- ===================== PROJECTS ===================== -->
     <section id="projects">
-      <h1>Projects</h1>
+      <h1 class="section-title">Projects</h1>
       <div class="projects-container">
-        <div class="project-card">
-          <img src="./Asset/image.png" alt="Personal Portfolio Website" class="project-media" />
-          <h2>Personal Portfolio Website</h2>
-          <h3>Built using HTML, CSS, and JavaScript</h3>
-          <p>
-            Designed and developed a responsive personal portfolio website to
-            showcase my skills, experience, and projects. Includes interactive
-            animations and smooth scrolling.
-          </p>
-          <div class="project-buttons">
-            <a href="https://portfilo-six-coral.vercel.app/" target="_blank" class="btn view">
-              <i class="fas fa-eye"></i> View
-            </a>
-            <a href="https://github.com/Ramsurya007/portfilo" target="_blank" class="btn code">
-              <i class="fab fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-          <img src="./Asset/Screenshot 2025-09-02 170302.png" alt="Dashboard Design Project" class="project-media" />
-          <h2>Dashboard Design Project</h2>
-          <h3>Tools: HTML, CSS</h3>
-          <p>
-            A responsive dashboard UI design built using HTML and CSS — clean
-            layout with modern visual components.
-          </p>
-          <div class="project-buttons">
-            <a href="https://ramsurya007.github.io/First_website/" target="_blank" class="btn view">
-              <i class="fas fa-eye"></i> View
-            </a>
-            <a href="https://github.com/Ramsurya007/First_website" target="_blank" class="btn code">
-              <i class="fab fa-github"></i> Code
-            </a>
-          </div>
-        </div>
 
-        <!-- 🔥 Project 2 -->
         <div class="project-card">
-          <video src="./Asset/WhatsApp Video 2025-06-29 at 18.28.15_fc5fadd8.mp4" muted autoplay loop
-            class="project-media"></video>
-          <h2>
-            An Efficient Deep Learning-Based Firearm Detection System Using
-            YOLOv8
-          </h2>
-          <h3>
-            Tools: Python, Flask, YOLOv8, OpenCV, CvZone, NumPy, Pandas,
-            SQLite3, HTML, CSS, JS
-          </h3>
-          <p>
-            A smart surveillance project that detects and classifies firearms
-            in real-time video streams using the YOLOv8 model.
-          </p>
-          <div class="project-buttons">
-            <a href="./Asset/WhatsApp Video 2025-06-29 at 18.28.15_fc5fadd8.mp4" target="_blank" class="btn view">
-              <i class="fas fa-eye"></i> View
-            </a>
-            <a href="https://github.com/Ramsurya007/An-Efficient-Deep-Learning-Based-Firearm-Detection-System-Using-Yolov8"
-              target="_blank" class="btn code">
-              <i class="fab fa-github"></i> Code
-            </a>
-          </div>
-        </div>
-        <div class="project-card">
-            <img src="./Asset/Screenshot (484).png" alt="Django Todo List Project" class="project-media" />
-
-            <h2>Django Todo List Application</h2>
-
-              <h3>Tools: Python, Django, HTML, CSS, JavaScript, SQLite3</h3>
-            
-              <p>
-                A full-stack Todo List web application developed using Django.
-                Features include user authentication, add/update/delete todos,
-                completed and recycle bin views, session-based login,
-                and interactive UI behavior implemented using JavaScript.
-                Data is stored using SQLite3 and the application is deployed on Render.
-              </p>
-            
-              <div class="project-buttons">
-                <a href="https://todo-list-uhl1.onrender.com/" target="_blank" class="btn view">
-                  <i class="fas fa-eye"></i> View
-                </a>
-            
-                <a href="https://github.com/Ramsurya007/todo-list" target="_blank" class="btn code">
-                  <i class="fab fa-github"></i> Code
-                </a>
-              </div>
+          <img src="./Asset/Screenshot (484).png" alt="Firearm Detection" class="project-media" />
+          <div class="project-card-body">
+            <h2>Firearm Detection System</h2>
+            <h3>Python · YOLOv8 · OpenCV · Deep Learning</h3>
+            <p>A smart surveillance project that detects and classifies firearms in real-time video streams using the YOLOv8 model.</p>
+            <div class="project-buttons">
+              <a href="./Asset/WhatsApp Video 2025-06-29 at 18.28.15_fc5fadd8.mp4" target="_blank" class="btn view">
+                <i class="fas fa-eye"></i> View
+              </a>
+              <a href="https://github.com/Ramsurya007/An-Efficient-Deep-Learning-Based-Firearm-Detection-System-Using-Yolov8" target="_blank" class="btn code">
+                <i class="fab fa-github"></i> Code
+              </a>
             </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./Asset/Screenshot (484).png" alt="Django Todo List Project" class="project-media" />
+          <div class="project-card-body">
+            <h2>Django Todo List Application</h2>
+            <h3>Python · Django · JavaScript · SQLite3</h3>
+            <p>A full-stack Todo List web app with user authentication, add/update/delete todos, completed &amp; recycle bin views, session-based login, and interactive JS UI. Deployed on Render.</p>
+            <div class="project-buttons">
+              <a href="https://todo-list-uhl1.onrender.com/" target="_blank" class="btn view">
+                <i class="fas fa-eye"></i> View
+              </a>
+              <a href="https://github.com/Ramsurya007/todo-list" target="_blank" class="btn code">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
+
+    <hr />
+
+    <!-- ===================== EDUCATION ===================== -->
     <section id="education">
-      <h1>Education</h1>
+      <h1 class="section-title">Education</h1>
       <div class="education-container">
-        <!-- 🎓 Degree 1 -->
+
         <div class="education-card">
           <h2>B.Tech Information Technology</h2>
           <h3>K.S.R. College of Engineering, Tiruchengode</h3>
-          <span class="edu-duration">2021 - 2025</span>
-          <p>
-            Pursuing Bachelor of Technology in Information Technology with a
-            current CGPA of <strong>7.44</strong>. Actively engaged in
-            developing projects focused on Python, Data Analytics, and Web
-            Development.
-          </p>
+          <span class="edu-duration">2021 – 2025</span>
+          <p>Pursuing B.Tech in Information Technology with a current CGPA of <strong>7.44</strong>. Actively engaged in Python, Data Analytics, and Web Development projects.</p>
         </div>
 
-        <!-- 🎓 Degree 2 -->
         <div class="education-card">
           <h2>Higher Secondary (HSC)</h2>
-          <h3>
-            Bharathi Balamandir Matric Higher Secondary School, Chinnasalem
-          </h3>
-          <span class="edu-duration">2020 - 2021</span>
-          <p>
-            Completed Higher Secondary education with a score of
-            <strong>69.9%</strong>, specializing in Computer Science.
-          </p>
+          <h3>Bharathi Balamandir Matric Higher Secondary School, Chinnasalem</h3>
+          <span class="edu-duration">2020 – 2021</span>
+          <p>Completed HSC with a score of <strong>69.9%</strong>, specializing in Computer Science.</p>
         </div>
 
-        <!-- 🎓 Degree 3 -->
         <div class="education-card">
           <h2>SSLC</h2>
           <h3>Sakthi Matric Higher Secondary School, Kaniyamoor</h3>
-          <span class="edu-duration">2018 - 2019</span>
-          <p>
-            Completed SSLC with a score of <strong>57.4%</strong>, building a
-            strong foundation for future studies in technology.
-          </p>
+          <span class="edu-duration">2018 – 2019</span>
+          <p>Completed SSLC with a score of <strong>57.4%</strong>, building a strong foundation for future studies in technology.</p>
         </div>
+
       </div>
     </section>
+
     <hr />
+
+    <!-- ===================== CERTIFICATES ===================== -->
     <section id="certificates">
-      <h1>Certificates</h1>
+      <h1 class="section-title">Certificates</h1>
       <div class="certificates-container">
+
         <div class="certificate-card">
-          <img src="./Asset/python1.png" alt=" Introduction to Python" />
-          <h2>Introduction to Python</h2>
-          <p>Issued by: Infosys | Springboard</p>
-          <a href="./Asset/Introduction of  python.pdf" target="_blank" class="btn view">
-            <i class="fas fa-eye"></i> View
-          </a>
+          <img src="./Asset/python1.png" alt="Introduction to Python" />
+          <div class="certificate-body">
+            <h2>Introduction to Python</h2>
+            <p>Issued by: Infosys | Springboard</p>
+            <a href="./Asset/Introduction of  python.pdf" target="_blank" class="btn view"><i class="fas fa-eye"></i> View</a>
+          </div>
         </div>
+
         <div class="certificate-card">
           <img src="./Asset/HTML and CSS.png" alt="HTML and CSS Certificate" />
-          <h2>HTML & CSS Essentials Bootcamp (3Days)</h2>
-          <p>Issued by: Lets Upgrade</p>
-          <a href="./Asset/LUEHTMLAUG123172.pdf" target="_blank" class="btn view">
-            <i class="fas fa-eye"></i> View
-          </a>
+          <div class="certificate-body">
+            <h2>HTML &amp; CSS Essentials Bootcamp (3 Days)</h2>
+            <p>Issued by: Lets Upgrade</p>
+            <a href="./Asset/LUEHTMLAUG123172.pdf" target="_blank" class="btn view"><i class="fas fa-eye"></i> View</a>
+          </div>
         </div>
 
-        <!-- 🏆 Certificate 1 -->
         <div class="certificate-card">
-          <img src="./Asset/Introduction to Java.png" alt="Introduction of java" />
-          <h2>Introduction of java</h2>
-          <p>Issued by: SoloLearn</p>
-          <a href="./Asset/Introduction of  java.pdf" target="_blank" class="btn view">
-            <i class="fas fa-eye"></i> View
-          </a>
+          <img src="./Asset/Introduction to Java.png" alt="Introduction of Java" />
+          <div class="certificate-body">
+            <h2>Introduction to Java</h2>
+            <p>Issued by: SoloLearn</p>
+            <a href="./Asset/Introduction of  java.pdf" target="_blank" class="btn view"><i class="fas fa-eye"></i> View</a>
+          </div>
         </div>
 
-        <!-- 🧠 Certificate 2 -->
         <div class="certificate-card">
-          <img src="./Asset/International Level Student Workshop.png"
-            alt="International Student Workshop 2024 on Data Science using Python" />
-          <h2>
-            International Student Workshop 2024 on Data Science using Python
-          </h2>
-          <p>Issued by: RV INSTITUTE OF TECHNOLOGY AND MANAGEMENT</p>
-          <a href="./Asset/International Student Workshop 2024 on Data Science using Python by Brainovision.pdf"
-            target="_blank" class="btn view">
-            <i class="fas fa-eye"></i> View
-          </a>
+          <img src="./Asset/International Level Student Workshop.png" alt="Data Science Workshop" />
+          <div class="certificate-body">
+            <h2>International Student Workshop 2024 on Data Science using Python</h2>
+            <p>Issued by: RV Institute of Technology &amp; Management</p>
+            <a href="./Asset/International Student Workshop 2024 on Data Science using Python by Brainovision.pdf" target="_blank" class="btn view"><i class="fas fa-eye"></i> View</a>
+          </div>
         </div>
 
-        <!-- 💻 Certificate 3 -->
         <div class="certificate-card">
-          <img src="./Asset/Salesforce Developer Virtual Internship.png" alt="alesforce Developer Virtual Internship" />
-          <h2>Salesforce Developer Virtual Internship</h2>
-          <p>Issued by: Salesforce</p>
-          <a href="./Asset/Ramsurya Salesforce certificate .pdf" target="_blank" class="btn view">
-            <i class="fas fa-eye"></i> View
-          </a>
+          <img src="./Asset/Salesforce Developer Virtual Internship.png" alt="Salesforce Internship" />
+          <div class="certificate-body">
+            <h2>Salesforce Developer Virtual Internship</h2>
+            <p>Issued by: Salesforce</p>
+            <a href="./Asset/Ramsurya Salesforce certificate .pdf" target="_blank" class="btn view"><i class="fas fa-eye"></i> View</a>
+          </div>
         </div>
+
       </div>
     </section>
+
     <hr />
+
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact">
-      <h1>Contact Me</h1>
-      <p class="contact-intro">
-        Have a question, project idea, or collaboration in mind? Feel free to
-        reach out!
-      </p>
+      <h1 class="section-title">Contact Me</h1>
+      <p class="contact-intro">Have a question, project idea, or collaboration in mind? Feel free to reach out!</p>
 
       <div class="contact-container">
-        <!-- 🧭 Contact Info -->
         <div class="contact-info">
           <div class="info-item">
             <i class="fas fa-envelope"></i>
             <div>
               <h3>Email</h3>
-              <p>
-                <a href="mailto:ramsuryajayabalan@gmail.com">ramsuryajayabalan@gmail.com</a>
-              </p>
+              <p><a href="mailto:ramsuryajayabalan@gmail.com">ramsuryajayabalan@gmail.com</a></p>
             </div>
           </div>
-
           <div class="info-item">
             <i class="fab fa-linkedin"></i>
             <div>
               <h3>LinkedIn</h3>
-              <p>
-                <a href="https://www.linkedin.com/in/ramsurya-j/" target="_blank">linkedin.com/in/ramsurya-j</a>
-              </p>
+              <p><a href="https://www.linkedin.com/in/ramsurya-j/" target="_blank">linkedin.com/in/ramsurya-j</a></p>
             </div>
           </div>
-
           <div class="info-item">
             <i class="fab fa-github"></i>
             <div>
               <h3>GitHub</h3>
-              <p>
-                <a href="https://github.com/Ramsurya007" target="_blank">github.com/Ramsurya007</a>
-              </p>
+              <p><a href="https://github.com/Ramsurya007" target="_blank">github.com/Ramsurya007</a></p>
             </div>
           </div>
-
           <div class="info-item">
             <i class="fas fa-phone"></i>
             <div>
@@ -498,31 +396,19 @@
           </div>
         </div>
 
-        <!-- 💬 Contact Form -->
         <form id="contact-form" class="contact-form">
           <input type="text" id="name" placeholder="Your Name" required />
           <input type="email" id="email" placeholder="Your Email" required />
           <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn send">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
+          <button type="submit" class="btn send"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
       </div>
     </section>
+
   </main>
-  <!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  (function () { emailjs.init("MiMJkoYAuZ3liWsph"); })();
-</script>
 
-
-  <!-- Your JavaScript -->
-  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>(function(){ emailjs.init("MiMJkoYAuZ3liWsph"); })();</script>
+  <script src="./JAVASCRIPT/main.js" defer></script>
 </body>
-
-</html>
-
-</body>
-
 </html>
