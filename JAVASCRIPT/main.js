@@ -98,7 +98,7 @@ const downloadBtn = document.getElementById("downloadBtn");
 if (downloadBtn) {
   downloadBtn.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = "/Asset/RAMSURYA JAYABALAN.pdf";
+    link.href = "/Asset/RAMSURYA JAYABALAN (6).pdf";
     link.download = "Ramsurya_Resume.pdf";
     document.body.appendChild(link);
     link.click();
