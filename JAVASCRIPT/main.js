@@ -66,11 +66,11 @@ if (backTop) {
 
 /* ============================== ROLE ROTATOR ============================== */
 const roles = [
-  "Python Developer",
-  "Data Analyst",
-  "Web Developer",
-  "Software Engineer",
-  "Full Stack Developer"
+    "Python Full Stack Developer",
+    ".NET Full Stack Developer",
+    "ASP.NET MVC Developer",
+    "Web API Developer",
+    "Software Engineer"
 ];
 let roleIndex = 0;
 const developEl = document.getElementById("develop");
@@ -98,7 +98,7 @@ const downloadBtn = document.getElementById("downloadBtn");
 if (downloadBtn) {
   downloadBtn.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.href = "/Asset/RAMSURYA JAYABALAN (6).pdf";
+    link.href = "/Asset/Ramsurya Jayabalan Resume.pdf";
     link.download = "Ramsurya_Resume.pdf";
     document.body.appendChild(link);
     link.click();
